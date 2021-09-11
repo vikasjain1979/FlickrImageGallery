@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "22715AEB-388E-4F02-BF42-CCDB928BF7EF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5381FD41-799B-49DD-9927-9094BBB7EC98"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickrGallery/View/GalleryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC336185-89B0-414A-8EA0-A45F32DE8F16"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickrGallery/ViewModel/GalleryViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "GalleryViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "329290C3-9C97-49AD-9067-F66F088FAD75"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickrGallery/ViewModel/GalleryViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "GalleryViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B52ADF1-0910-4877-B673-E35B8F0F793D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickrGallery/ViewModel/GalleryViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "getGalleryImage(for:onCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9B52ADF1-0910-4877-B673-E35B8F0F793D - cbddaabecd88d5b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlickrGallery.GalleryViewModel.getGalleryImage(for: FlickrGallery.FlickrImage, onCompletion: (Swift.Result&lt;Foundation.Data, FlickrGallery.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FlickrGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/811814/Documents/Personal/InterviewCodeChallenge/Flickr/FlickrGallery/FlickrGallery/ViewModel/GalleryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "9B52ADF1-0910-4877-B673-E35B8F0F793D - fb298bb49bae34d8"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, FlickrGallery.APIError&gt;) -&gt; () in FlickrGallery.GalleryViewModel.getGalleryImage(for: FlickrGallery.FlickrImage, onCompletion: (Swift.Result&lt;Foundation.Data, FlickrGallery.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FlickrGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/811814/Documents/Personal/InterviewCodeChallenge/Flickr/FlickrGallery/FlickrGallery/ViewModel/GalleryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "197">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73304F13-94CA-495C-BDA6-AD9908965A33"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickrGallery/ViewModel/GalleryViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "getGalleryImage(for:onCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "73304F13-94CA-495C-BDA6-AD9908965A33 - fb298bb49bae34d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, FlickrGallery.APIError&gt;) -&gt; () in FlickrGallery.GalleryViewModel.getGalleryImage(for: FlickrGallery.FlickrImage, onCompletion: (Swift.Result&lt;Foundation.Data, FlickrGallery.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FlickrGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/811814/Documents/Personal/InterviewCodeChallenge/Flickr/FlickrGallery/FlickrGallery/ViewModel/GalleryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "197">
+               </Location>
+               <Location
+                  uuid = "73304F13-94CA-495C-BDA6-AD9908965A33 - fb298bb49bae34d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, FlickrGallery.APIError&gt;) -&gt; () in FlickrGallery.GalleryViewModel.getGalleryImage(for: FlickrGallery.FlickrImage, onCompletion: (Swift.Result&lt;Foundation.Data, FlickrGallery.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FlickrGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/811814/Documents/Personal/InterviewCodeChallenge/Flickr/FlickrGallery/FlickrGallery/ViewModel/GalleryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "230">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E67D4B31-1E9D-4336-A2DA-F888C5E6A7A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickrGalleryTests/MockService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "fetchGalleryImage(galleryObject:onCompletion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
