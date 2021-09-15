@@ -118,7 +118,9 @@ extension GalleryViewController: GalleryViewModelDelegate {
             self.galleryModel = value.photos
         }
         
-        self.collectionView.reloadData()
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
     
     func handleError(_ error: APIError) {
