@@ -22,7 +22,7 @@ protocol GalleryViewModelDelegate: NSObject {
 
 class GalleryViewModel {
     // MARK: - Properties
-    var galleryData: Gallery?
+    var galleryData: Photos?
     let serviceRequestCoordinator: ServiceRequestPerforming
     
     weak var viewModelDelegate: GalleryViewModelDelegate?
@@ -45,6 +45,7 @@ class GalleryViewModel {
         self.serviceRequestCoordinator.fetchGalleryData(for: text, pageNum: currentPage + 1, onCompletion: { (result) in
             switch result {
             case .success(let value):
+                self.galleryData = value
                 self.viewModelDelegate?.galleryInfo(value)
             case .failure(let error):
                 //NOTE: If needed we can log the error here in log file or call the Error handler as well
