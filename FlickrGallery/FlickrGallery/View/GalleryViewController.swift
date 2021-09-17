@@ -13,7 +13,6 @@ final class GalleryViewController: UICollectionViewController {
     //MARK:- Properties
     
     private let cellReuseIdentifier = "ImageCell"
-    private var galleryModel: Gallery?
     private var galleryViewModel: GalleryViewModel?
     private var currentSearchText = ""
     
@@ -38,8 +37,8 @@ final class GalleryViewController: UICollectionViewController {
         
         // Reset the model when search text changes
         if let searchText = self.searchTextField.text, !searchText.isEmpty, currentSearchText != searchText {
+            self.galleryViewModel?.resetSearch()
             self.currentSearchText = searchText
-            self.galleryModel = nil
             self.galleryViewModel?.getGalleryInfo(for: searchText)
         }
     }
@@ -58,13 +57,13 @@ extension GalleryViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return galleryModel?.images.count ?? 0
+        return galleryViewModel?.galleryData?.photos.images.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as! CustomImageCell
         
-        if let image = self.galleryModel?.images[indexPath.row] {
+        if let image = self.galleryViewModel?.galleryData?.photos.images[indexPath.row] {
             cell.showActivityIndicator()
             self.galleryViewModel?.getGalleryImage(for: image, onCompletion: { (result) in
                 switch result {
@@ -81,7 +80,7 @@ extension GalleryViewController {
     
     /// To fetch the next set of images from API when last set of images are displayed
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if let model = self.galleryModel, indexPath.row == model.images.count - 1 {
+        if let model = self.galleryViewModel?.galleryData?.photos, indexPath.row == model.images.count - 1 {
             self.galleryViewModel?.getGalleryInfo(for: self.searchTextField.text ?? "", currentPage: model.page)
         }
     }
@@ -110,14 +109,7 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension GalleryViewController: GalleryViewModelDelegate {
-    func galleryInfo(_ value: Photos) {
-        if let _ = self.galleryModel {
-            self.galleryModel?.page = value.photos.page
-            self.galleryModel?.images.append(contentsOf: value.photos.images)
-        } else {
-            self.galleryModel = value.photos
-        }
-        
+    func galleryInfoUpdated() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
