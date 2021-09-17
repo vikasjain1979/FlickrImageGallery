@@ -15,7 +15,6 @@ class FlickrGalleryTests: XCTestCase {
     var viewModel: GalleryViewModel!
     var successExpectation: XCTestExpectation!
     var failureExpectation: XCTestExpectation!
-    var galleryData: Photos!
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -65,9 +64,8 @@ class FlickrGalleryTests: XCTestCase {
 
 
 extension FlickrGalleryTests: GalleryViewModelDelegate {
-    func galleryInfo(_ value: Photos) {
-        if (value.photos.images.count > 0 ) {
-            self.galleryData = value
+    func galleryInfoUpdated() {
+        if (viewModel.galleryData?.photos.images.count ?? 0) > 0 {
             self.successExpectation.fulfill()
         } else {
             XCTFail()
@@ -82,4 +80,3 @@ extension FlickrGalleryTests: GalleryViewModelDelegate {
         }
     }
 }
-
