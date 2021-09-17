@@ -9,7 +9,7 @@ FlickrImageGallery is a basic solution to handle the gallery images which is imp
 
 **Alamofire**
 
-This project uses Alamofire as a dependency which is updated using the Swift Package Manager (SPM)
+This project uses Alamofire (v5.4.3) as a dependency which is updated using the Swift Package Manager (SPM)
 
 # Description
 
