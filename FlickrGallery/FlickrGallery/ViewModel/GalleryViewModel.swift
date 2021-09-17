@@ -13,7 +13,7 @@ protocol GalleryViewModelDelegate: NSObject {
     
     /// Callback delegate when gallery data is fetched successfully
     /// - Parameter value: The gallery data response
-    func galleryInfo(_ value: Photos)
+    func galleryInfoUpdated()
     
     /// Error handler callback
     /// - Parameter error: Error object
@@ -22,7 +22,12 @@ protocol GalleryViewModelDelegate: NSObject {
 
 class GalleryViewModel {
     // MARK: - Properties
-    var galleryData: Photos?
+    private(set) var galleryData: Photos? {
+        didSet {
+            self.viewModelDelegate?.galleryInfoUpdated()
+        }
+    }
+
     let serviceRequestCoordinator: ServiceRequestPerforming
     
     weak var viewModelDelegate: GalleryViewModelDelegate?
@@ -45,8 +50,12 @@ class GalleryViewModel {
         self.serviceRequestCoordinator.fetchGalleryData(for: text, pageNum: currentPage + 1, onCompletion: { (result) in
             switch result {
             case .success(let value):
-                self.galleryData = value
-                self.viewModelDelegate?.galleryInfo(value)
+                if let _ = self.galleryData {
+                    self.galleryData?.photos.page = value.photos.page
+                    self.galleryData?.photos.images.append(contentsOf: value.photos.images)
+                } else {
+                    self.galleryData = value
+                }
             case .failure(let error):
                 //NOTE: If needed we can log the error here in log file or call the Error handler as well
                 self.viewModelDelegate?.handleError(error)
@@ -68,5 +77,11 @@ class GalleryViewModel {
                 onCompletion(.failure(error))
             }
         }
+    }
+    
+    
+    /// To reset the search data in case search text changes
+    func resetSearch() {
+        self.galleryData = nil
     }
 }
